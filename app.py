@@ -3,8 +3,11 @@ from flask import Flask, render_template,request,redirect
 
 app = Flask(__name__)
 
-tasks = ["レポートを書く", "買い物に行く", "Pythonの勉強"]
-
+tasks = [
+    {"name":"レポート書く","done":False},
+    {"name":"買い物に行く","done":False},
+    {"name":"Pythonの勉強","done":False}
+]
 
 @app.route("/")
 def home():
@@ -14,6 +17,11 @@ def home():
 def add():
     new_task = request.form["new_task"]
     tasks.append(new_task)
+    return redirect("/")
+
+@app.route("/done/<int:task_id>")
+def done(task_id):
+    tasks[task_id]["done"] = True
     return redirect("/")
 
 if __name__ == "__main__":
