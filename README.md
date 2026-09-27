@@ -7,6 +7,10 @@ Pythonの基礎からGit/GitHubの使い方、Flaskを使ったWebアプリ開�
 
 URL　https://my-first-project-gh1w.onrender.com
 
+## 注意事項
+
+このアプリはデータSQLiteファイルに保存していますが、Renderの無料プランはファイルシステム**再デプロイのたびにデータがリセットされます*。ローカル環境ではデータは正しく保持されます。
+
 ## できること（ToDoアプリ）
 
 - タスク追加
