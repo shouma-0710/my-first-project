@@ -13,7 +13,7 @@
                     <s>{{ task.name }}</s>
                 {% else %}
                     {{ task.name }}
-                    <a href="/done/{{ loop.index0 }}">完了にする</a>
+                    <a href="/done/{{ task.id }}">完了にする</a>
                 {% endif %}
 
             </li>
